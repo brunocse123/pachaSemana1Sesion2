@@ -1,14 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <header>
-        Pagina de inicio
-    </header>
-    <h1>Pagina 2</h1>
-</body>
+
+    <link href="../styles/main.css" rel="stylesheet" />
+    <link href="../styles/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="../styles/login.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="background"></div>
+    <div class="punto"></div>
+    <div id="login" class="sombra_caja text-center animated fadeInDown">
+      <div class="login_interior">
+        <p>
+          <img src="/images/login/logo.png" width="90" height="90" />
+        </p>
+        <h2>Bienvenido a Austral Group S.A.A.</h2>
+        <form method="post">
+          <div
+            class="text-danger validation-summary-valid"
+            data-valmsg-summary="true"
+          >
+            <ul>
+              <li style="display: none;"></li>
+            </ul>
+          </div>
+          <span
+            class="field-validation-valid"
+            data-valmsg-for="CustomError"
+            data-valmsg-replace="true"
+          ></span>
+          <div style="display: none;"></div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              placeholder="Usuario"
+              type="text"
+              data-val="true"
+              data-val-required="The Usuario field is required."
+              id="Input_Email"
+              name="Input.Email"
+              value=""
+            />
+            <span
+              class="text-danger field-validation-valid"
+              data-valmsg-for="Input.Email"
+              data-valmsg-replace="true"
+            ></span>
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              placeholder="Contraseña"
+              type="password"
+              data-val="true"
+              data-val-required="The Password field is required."
+              id="Input_Password"
+              name="Input.Password"
+            />
+            <span
+              class="text-danger field-validation-valid"
+              data-valmsg-for="Input.Password"
+              data-valmsg-replace="true"
+            ></span>
+          </div>
+          <div class="checkbox remember-me">
+            <label>
+              <input
+                type="checkbox"
+                name="data[User][remember_me]"
+                value="1"
+                id="UserRememberMe"
+              />
+              Recordarme
+            </label>
+          </div>
+
+          <input
+            class="btn btn-primary block full-width m-b"
+            type="submit"
+            value="Ingresar"
+            style="
+              border-color: #043f80;
+              background-color: #043f80;
+              color: white;
+            "
+          />
+          <small style="position: relative; top: 5px;">
+            <a id="forgot-password" href="/Identity/Account/ForgotPassword"
+              >¿Olvidaste tu contraseña?</a
+            >
+            <br /><br />
+            <p>
+              ¿Necesita ayuda? Escribanos a
+              <a href="mailto:proveedores@austral.com.pe"
+                >proveedores@austral.com.pe</a
+              >
+            </p>
+            <p>
+              Horarios de atención: Lun-Vie de 8:30 am a 6 pm
+            </p>
+          </small>
+
+          <input
+            name="__RequestVerificationToken"
+            type="hidden"
+            value="CfDJ8B7r4i89HmtJp9mhn0ExJfmU3cQZXt2OjyQIXNW4Gbq1aIPITRfx1baGZo8P3jhw3KrAAzxgbLz7K4rDAnZ18JDPF9fvalSn3KQRx_uWoVl-U14gvcmndNZG0JDw6yGHsNvKHnT-XdsYDKELqxvDqy4"
+          />
+        </form>
+      </div>
+    </div>
+
+
+
+    <script src="/js/main.js"></script>
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/js/inspinia.js"></script>
+    <script src="/js/jquery-2.1.1.js"></script>
+    <script src="/js/jquery.metisMenu.js"></script>
+    <script src="/js/jquery.slimscroll.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="../js/login.js"></script>
+  </body>
 </html>
